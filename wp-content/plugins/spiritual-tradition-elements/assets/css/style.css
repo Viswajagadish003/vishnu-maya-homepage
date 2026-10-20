@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ==========================================================================
+   Spiritual Tradition Elements - Master Stylesheet
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Widget 1: Intro / Hero Section
+   -------------------------------------------------------------------------- */
+.ste-intro-hero {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ste-intro-grid {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+.ste-intro-col-image {
+    width: 45%;
+    flex: 0 0 45%;
+    box-sizing: border-box;
+}
+
+.ste-intro-image-wrap {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    line-height: 0;
+}
+
+.ste-intro-image {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ste-intro-image-wrap:hover .ste-intro-image {
+    transform: scale(1.02);
+}
+
+.ste-intro-col-content {
+    width: 55%;
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.ste-intro-subtitle-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.ste-intro-sub-line {
+    display: inline-block;
+    width: 45px;
+    height: 1.5px;
+    background-color: #990000;
+    flex-shrink: 0;
+}
+
+.ste-intro-sub-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #990000;
+    flex-shrink: 0;
+}
+
+.ste-intro-sub-icon svg,
+.ste-intro-sub-icon img,
+.ste-intro-sub-icon i {
+    width: 18px;
+    height: 18px;
+    max-width: 18px;
+    max-height: 18px;
+    object-fit: contain;
+    fill: currentColor;
+    color: inherit;
+    display: block;
+}
+
+.ste-intro-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #990000;
+}
+
+.ste-intro-title {
+    font-family: "Cinzel", "Playfair Display", Georgia, serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ste-intro-title-highlight {
+    color: #990000;
+}
+
+.ste-intro-title-main {
+    color: #1a1a1a;
+}
+
+.ste-intro-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444444;
+}
+
+.ste-intro-desc p {
+    margin: 0 0 16px 0;
+}
+
+.ste-intro-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Widget 2: Stats Grid
+   -------------------------------------------------------------------------- */
+.ste-stats-section {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ste-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.ste-stat-card {
+    background: #FFFEFC;
+    border: 1px solid #EEDFCC;
+    border-radius: 16px;
+    padding: 34px 22px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(180, 140, 80, 0.12);
+    box-shadow: 0 4px 20px #B48C501F;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ste-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(180, 140, 80, 0.22);
+}
+
+.ste-stat-icon-wrap {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1.5px solid #990000;
+    color: #990000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    font-size: 18px;
+    background: transparent;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.ste-stat-icon-wrap svg,
+.ste-stat-icon-wrap img,
+.ste-stat-icon-wrap i {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    object-fit: contain;
+    fill: currentColor;
+    color: inherit;
+    display: block;
+}
+
+.ste-stat-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.ste-stat-number-wrap {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.ste-stat-number {
+    font-family: "Cinzel", "Playfair Display", Georgia, serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #990000;
+    line-height: 1;
+}
+
+.ste-stat-suffix {
+    font-family: "Cinzel", "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #990000;
+    margin-left: 2px;
+}
+
+.ste-stat-desc {
+    font-size: 13.5px;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Widget 3: Section Heading with Decorative Divider
+   -------------------------------------------------------------------------- */
+.ste-section-heading {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.ste-heading-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.ste-heading-divider {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.ste-heading-line {
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background-color: #990000;
+    flex-shrink: 0;
+}
+
+.ste-heading-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #990000;
+    flex-shrink: 0;
+}
+
+.ste-heading-icon svg,
+.ste-heading-icon img,
+.ste-heading-icon i {
+    width: 26px;
+    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+    object-fit: contain;
+    fill: currentColor;
+    color: inherit;
+    display: block;
+}
+
+.ste-heading-subtitle {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #990000;
+    margin-bottom: 10px;
+}
+
+.ste-heading-title {
+    font-family: "Cinzel", "Playfair Display", Georgia, serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 12px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.ste-heading-title .ste-highlight {
+    color: #990000;
+}
+
+.ste-heading-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555555;
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Widget 4: Spiritual Guidance & Healing Section
+   -------------------------------------------------------------------------- */
+.ste-guidance-hero {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.ste-guidance-card-frame {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e6e8eb;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+}
+
+.ste-guidance-grid {
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Desktop Image Positioning */
+.ste-guidance-hero.ste-desktop-img-left .ste-guidance-col-image {
+    order: 1;
+}
+.ste-guidance-hero.ste-desktop-img-left .ste-guidance-col-content {
+    order: 2;
+}
+
+.ste-guidance-hero.ste-desktop-img-right .ste-guidance-col-image {
+    order: 2;
+}
+.ste-guidance-hero.ste-desktop-img-right .ste-guidance-col-content {
+    order: 1;
+}
+
+.ste-guidance-col-image {
+    width: 44%;
+    flex: 0 0 44%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.ste-guidance-image-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.ste-guidance-image {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ste-guidance-image-wrap:hover .ste-guidance-image {
+    transform: scale(1.02);
+}
+
+/* Reduced Section Inner Padding (Compact & Elegant) */
+.ste-guidance-col-content {
+    width: 56%;
+    flex: 1 1 56%;
+    padding: 18px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ste-guidance-subtitle-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.ste-guidance-sub-line {
+    display: inline-block;
+    width: 28px;
+    height: 1.5px;
+    background-color: #990000;
+    flex-shrink: 0;
+}
+
+.ste-guidance-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #990000;
+}
+
+/* Title with compact spacing to description */
+.ste-guidance-title {
+    font-family: "Cinzel", "Playfair Display", Georgia, serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.22;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ste-guidance-title-prefix {
+    color: #1a1a1a;
+    display: block;
+}
+
+.ste-guidance-title-highlight {
+    color: #990000;
+    display: block;
+}
+
+.ste-guidance-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #444444;
+    margin-bottom: 12px;
+}
+
+.ste-guidance-desc p {
+    margin: 0 0 6px 0;
+}
+
+.ste-guidance-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* Compact 2-Column Cards Grid - Zero Phantom Padding & Perfectly Centered Icons */
+.ste-guidance-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+    box-sizing: border-box;
+}
+
+.ste-guidance-card {
+    background-color: #ffffff;
+    border: 1px solid #ffd8d8;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin: 0;
+    display: flex !important;
+    align-items: center !important; /* Vertically centered */
+    gap: 12px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+}
+
+.ste-guidance-card.ste-card-is-link {
+    cursor: pointer;
+}
+
+.ste-guidance-card:hover {
+    border-color: #d45b5b;
+    box-shadow: 0 4px 14px rgba(153, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.ste-guidance-card-icon-wrap {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 50%;
+    border: 1.5px solid #d45b5b;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important; /* Force vertical center */
+    color: #990000;
+    background: transparent;
+    box-sizing: border-box;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ste-guidance-card-icon-wrap svg,
+.ste-guidance-card-icon-wrap i,
+.ste-guidance-card-icon-wrap img {
+    width: 15px;
+    height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    object-fit: contain;
+    fill: currentColor;
+    color: inherit;
+    display: block;
+    margin: 0 auto !important;
+}
+
+.ste-guidance-card-body {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-self: center !important; /* Force vertical center */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.ste-guidance-card-title {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    color: #990000;
+    margin: 0 0 3px 0 !important; /* Completely removes theme top & bottom margin */
+    padding: 0 !important;
+    font-family: inherit;
+}
+
+.ste-guidance-card-text {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    color: #555555;
+    margin: 0 !important; /* Completely removes theme bottom margin */
+    padding: 0 !important;
+}
+
+/* Action Button */
+.ste-guidance-btn-wrap {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2px;
+}
+
+.ste-guidance-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #b30000;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 9px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 12px rgba(179, 0, 0, 0.22);
+    border: none;
+    cursor: pointer;
+}
+
+.ste-guidance-btn:hover {
+    background-color: #8b0000;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(179, 0, 0, 0.32);
+}
+
+.ste-guidance-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    transition: transform 0.2s ease;
+}
+
+.ste-guidance-btn:hover .ste-guidance-btn-icon {
+    transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+    .ste-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    /* ----------------------------------------------------------------------
+       1) SPIRITUAL GUIDANCE & HEALING:
+          Mobile version keeps IMAGE ON THE TOP, and BELOW IT the content box
+       ---------------------------------------------------------------------- */
+    .ste-guidance-hero .ste-guidance-grid {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* By default: Image on the TOP */
+    .ste-guidance-hero .ste-guidance-col-image,
+    .ste-guidance-hero.ste-mobile-img-above .ste-guidance-col-image {
+        order: 1 !important; /* Image on top */
+        width: 100% !important;
+        flex: 0 0 auto !important;
+        display: block !important;
+    }
+
+    /* By default: Content box BELOW the image (Reduced Mobile Padding) */
+    .ste-guidance-hero .ste-guidance-col-content,
+    .ste-guidance-hero.ste-mobile-img-above .ste-guidance-col-content {
+        order: 2 !important; /* Content box below */
+        width: 100% !important;
+        flex: 1 1 100% !important;
+        padding: 18px 16px !important;
+    }
+
+    .ste-guidance-hero .ste-guidance-image {
+        min-height: 260px !important;
+        max-height: 400px !important;
+        border-radius: 16px 16px 0 0 !important;
+    }
+
+    /* Option: If user selects 'Image Below Content' in Elementor widget controls */
+    .ste-guidance-hero.ste-mobile-img-below .ste-guidance-col-content {
+        order: 1 !important; /* Content first */
+    }
+    .ste-guidance-hero.ste-mobile-img-below .ste-guidance-col-image {
+        order: 2 !important; /* Image below content */
+    }
+    .ste-guidance-hero.ste-mobile-img-below .ste-guidance-image {
+        border-radius: 0 0 16px 16px !important;
+    }
+
+    /* Cards stack to 1 column on mobile for clean readability */
+    .ste-guidance-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    /* ----------------------------------------------------------------------
+       2) OTHER SECTIONS IN THIS PLUGIN (e.g. Intro Hero):
+          Mobile version keeps IMAGE ON THE TOP, and BELOW IT the content box
+       ---------------------------------------------------------------------- */
+    .ste-intro-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 28px !important;
+    }
+
+    .ste-intro-col-image {
+        order: 1 !important; /* Image on the TOP */
+        width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .ste-intro-col-content {
+        order: 2 !important; /* BELOW the image is the content box */
+        width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    .ste-intro-subtitle-wrap {
+        align-self: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .ste-intro-image {
+        min-height: 260px;
+    }
+
+    .ste-intro-title {
+        font-size: 26px;
+    }
+
+    .ste-heading-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 640px) {
+    .ste-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .ste-intro-subtitle-wrap {
+        align-self: center !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .ste-intro-title {
+        font-size: 22px;
+    }
+
+    .ste-heading-title {
+        font-size: 22px;
+    }
+
+    .ste-stat-number {
+        font-size: 30px;
+    }
+
+    /* Spiritual guidance mobile adjustments (Compact padding) */
+    .ste-guidance-col-content {
+        padding: 16px 12px !important;
+    }
+
+    .ste-guidance-title {
+        font-size: 22px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .ste-guidance-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+    }
+
+    .ste-guidance-card {
+        padding: 7px 10px !important;
+        gap: 10px !important;
+        align-items: center !important;
+    }
+    .ste-guidance-card-icon-wrap {
+        align-self: center !important;
+    }
+
+    .ste-guidance-card-icon-wrap {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+    }
+
+    .ste-guidance-card-icon-wrap svg,
+    .ste-guidance-card-icon-wrap i {
+        width: 13px !important;
+        height: 13px !important;
+    }
+
+    .ste-guidance-card-title {
+        font-size: 12.5px !important;
+    }
+
+    .ste-guidance-card-text {
+        font-size: 11px !important;
+    }
+
+    .ste-guidance-hero .ste-guidance-image {
+        min-height: 220px !important;
+    }
+}

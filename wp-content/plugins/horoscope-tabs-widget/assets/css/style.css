@@ -1,0 +1,226 @@
+/* Horoscope Tabs Widget Styles */
+
+.ht-widget-container {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ht-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space out the tabs evenly */
+    align-items: center;
+    gap: 20px; /* Overridden by Elementor settings */
+}
+
+.ht-tab-item {
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0.7; /* Inactive state */
+    flex: 1 1 0;
+    min-width: 60px;
+}
+
+.ht-tab-item.active,
+.ht-tab-item:hover {
+    opacity: 1; /* Active/Hover state */
+}
+
+.ht-tab-img {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.ht-tab-img img {
+    width: 60px; /* Overridden by Elementor settings */
+    height: auto;
+    object-fit: contain;
+}
+
+.ht-tab-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.ht-tabs-content {
+    margin-top: 30px;
+}
+
+.ht-tab-pane {
+    display: none;
+    border: 1px solid #f2d4d4; /* Default border color matching screenshot */
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.ht-tab-pane.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.ht-pane-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Columns */
+.ht-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.ht-col-sign {
+    flex: 0 0 100px; /* Fixed width for sign column */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ht-sign-img {
+    margin-bottom: 10px;
+}
+
+.ht-sign-img img {
+    width: 70px;
+    height: auto;
+}
+
+.ht-sign-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.ht-horoscope-title,
+.ht-concerns-title,
+.ht-homam-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.ht-horoscope-date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.ht-horoscope-desc,
+.ht-concerns-list,
+.ht-homam-desc,
+.ht-homam-list {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.ht-concerns-list ul,
+.ht-homam-list ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.ht-concerns-list ul li,
+.ht-homam-list ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+.ht-concerns-list ul li::before,
+.ht-homam-list ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 18px;
+    color: #216cd3; /* Default bullet color */
+}
+
+.ht-col-concerns,
+.ht-col-homam {
+    position: relative;
+}
+
+/* Divider lines between columns */
+@media (min-width: 992px) {
+    .ht-col-concerns::before,
+    .ht-col-homam::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: #f2e2e2; /* Light divider */
+    }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .ht-pane-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .ht-col {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+    
+    .ht-col-sign {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .ht-sign-img {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .ht-tabs-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        padding-bottom: 15px; /* Space for scroll area */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        
+        /* Hide scrollbar for a cleaner look */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    .ht-tabs-nav::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+    }
+    
+    .ht-tab-item {
+        flex: 0 0 auto;
+        min-width: 75px; /* Minimum width to keep icons clear */
+    }
+    
+    .ht-pane-inner {
+        gap: 25px; /* Slightly increase gap between stacked sections on mobile */
+    }
+}

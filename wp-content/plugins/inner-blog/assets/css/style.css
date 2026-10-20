@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* Inner Blog Elements CSS */
+
+/* Meaning Cards */
+.ibe-meaning-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.ibe-meaning-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+.ibe-meaning-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transform: translateY(-5px);
+}
+.ibe-mc-icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #f29f05;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #f29f05;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+.ibe-mc-title {
+    color: #cc0000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.ibe-mc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.ibe-mc-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+.ibe-mc-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #cc0000;
+}
+
+/* Practice Cards (Steps) */
+.ibe-practice-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+    padding-top: 15px; /* Add padding so top numbers aren't cut off */
+}
+.ibe-practice-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #ffebeb;
+    border-radius: 8px;
+    padding: 25px 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(204,0,0,0.03);
+}
+.ibe-pc-number {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    background: #cc0000;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.ibe-pc-icon-wrap {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    background: #fff4f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ibe-pc-icon {
+    color: #cc0000;
+    font-size: 20px;
+}
+.ibe-pc-step {
+    color: #cc0000;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+.ibe-pc-desc {
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Practice Cards Icon Positions */
+.ibe-icon-pos-left .ibe-practice-card {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.ibe-icon-pos-left .ibe-pc-icon-wrap {
+    margin: 0 15px 0 0;
+    flex-shrink: 0;
+}
+
+.ibe-icon-pos-right .ibe-practice-card {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.ibe-icon-pos-right .ibe-pc-icon-wrap {
+    margin: 0 0 0 15px;
+    flex-shrink: 0;
+}
+
+.ibe-valign-top .ibe-practice-card {
+    align-items: flex-start;
+}
+.ibe-valign-middle .ibe-practice-card {
+    align-items: center;
+}
+.ibe-valign-bottom .ibe-practice-card {
+    align-items: flex-end;
+}
+
+/* Vertical Consultation Box */
+.ibe-vertical-consultation {
+    background: #fffcfc;
+    border: 1px solid #ffe8e8;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.ibe-vc-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f29f05;
+    color: #f29f05;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px;
+}
+.ibe-vc-title {
+    color: #cc0000;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.ibe-vc-desc {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.ibe-vc-btn {
+    display: inline-block;
+    background: #cc0000;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    width: 100%;
+}
+
+/* Related Articles */
+.ibe-related-articles {
+    background: #ffffff;
+    border: 1px solid #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.03);
+    margin-bottom: 30px;
+}
+.ibe-ra-title {
+    color: #a50000;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.ibe-ra-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.ibe-ra-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+.ibe-ra-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: #111e3c;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+.ibe-ra-content {
+    flex: 1;
+}
+.ibe-ra-post-title {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.ibe-ra-date {
+    color: #888;
+    font-size: 12px;
+}
+.ibe-ra-arrow {
+    color: #cc0000;
+    font-size: 16px;
+}
+
+.ibe-explore-insights {
+    border-radius: 12px;
+    padding: 0;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.ibe-ei-img {
+    max-width: 100px;
+    margin: 0 auto 20px;
+}
+.ibe-ei-title {
+    color: #f29f05;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+.ibe-ei-desc {
+    font-size: 13px;
+    color: #ddd;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.ibe-ei-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #0a1120;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    width: 100%;
+}
+
+/* FAQ Accordion */
+.ibe-faq-wrapper {
+    margin-bottom: 50px;
+}
+.ibe-faq-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.ibe-faq-title {
+    padding: 15px 20px;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+.ibe-faq-title i {
+    color: #cc0000;
+}
+.ibe-faq-content {
+    padding: 0 20px 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .ibe-meaning-cards, .ibe-practice-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Comparison Table */
+.ibe-table-title {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #cc0000;
+}
+.ibe-table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+}
+.ibe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+.ibe-table th {
+    background-color: #990000;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    font-weight: bold;
+}
+.ibe-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    color: #333333;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+.ibe-table th:last-child,
+.ibe-table td:last-child {
+    border-right: none;
+}
+.ibe-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Zodiac Cards Widget */
+.ibe-zc-main-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+.ibe-zc-grid {
+    display: grid;
+    gap: 15px;
+}
+.ibe-zc-card {
+    border: 1px solid #f2d4d4;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+}
+.ibe-zc-shadow {
+    box-shadow: 0 5px 15px rgba(204,0,0,0.05);
+}
+.ibe-zc-icon-wrap {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ibe-zc-icon {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ibe-zc-icon svg {
+    width: 24px;
+    height: 24px;
+}
+.ibe-zc-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.ibe-zc-subheading {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+.ibe-zc-desc {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Info Cards Widget */
+.ibe-ic-grid {
+    display: grid;
+    gap: 20px;
+}
+.ibe-ic-card {
+    border: 1px solid #ebc7c7;
+    border-radius: 12px;
+    padding: 25px;
+    background: #ffffff;
+}
+.ibe-ic-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #990000;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.ibe-ic-body {
+    display: flex;
+    gap: 20px;
+}
+.ibe-ic-img-wrap {
+    width: 120px;
+    flex-basis: 120px;
+    flex-shrink: 0;
+}
+.ibe-ic-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.ibe-ic-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+}
+.ibe-ic-desc p:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 767px) {
+    .ibe-ic-body {
+        flex-direction: column;
+    }
+    .ibe-ic-img-wrap {
+        width: 100%;
+        flex-basis: auto;
+    }
+    .ibe-ic-img {
+        height: auto;
+    }
+}
+
+/* Versus Table */
+.ibe-vt-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #990000;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.ibe-vt-wrapper {
+    border: 1px solid #e8eff5;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.02);
+}
+.ibe-vt-header {
+    display: flex;
+    background: #cc0000;
+    color: #fff;
+}
+.ibe-vt-header-col {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ibe-vt-header-col:first-child {
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+.ibe-vt-body {
+    display: flex;
+    flex-direction: column;
+}
+.ibe-vt-row {
+    display: flex;
+    border-bottom: 1px solid #e8eff5;
+}
+.ibe-vt-row:last-child {
+    border-bottom: none;
+}
+.ibe-vt-col {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+.ibe-vt-col:first-child {
+    border-right: 1px solid #e8eff5;
+}
+.ibe-vt-icon {
+    color: #cc0000;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+.ibe-vt-text {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+    .ibe-vt-header {
+        flex-direction: column;
+    }
+    .ibe-vt-header-col:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .ibe-vt-row {
+        flex-direction: column;
+    }
+    .ibe-vt-col:first-child {
+        border-right: none;
+        border-bottom: 1px dashed #e8eff5;
+    }
+}
+
+/* Tradition Card Widget */
+.ibe-tradition-card {
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid #EEDFCC;
+    box-shadow: 0 4px 20px rgba(180, 140, 80, 0.12);
+    box-shadow: 0 4px 20px #B48C501F;
+    background-color: transparent;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ibe-tradition-card:hover {
+    box-shadow: 0 6px 24px rgba(180, 140, 80, 0.18);
+    box-shadow: 0 6px 24px #B48C502E;
+}
+
+.ibe-tc-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 480px;
+    border: none !important;
+    border-right: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    flex-shrink: 0;
+}
+
+.ibe-tc-content {
+    position: relative;
+    overflow: hidden;
+    padding: 30px 10px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    margin-left: -1px;
+    border: none !important;
+    border-left: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.ibe-tc-overlay {
+    position: absolute;
+    right: -25px;
+    bottom: -25px;
+    width: 330px;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ibe-tc-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.ibe-tc-subtitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.ibe-tc-sub-line {
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.ibe-tc-title {
+    font-family: "Cinzel", "Playfair Display", Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ibe-tc-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    opacity: 0.9;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.ibe-tc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 20px;
+}
+
+.ibe-tc-list-item {
+    display: flex;
+    align-items: center;
+    padding: 1px 0;
+    border: none !important;
+    text-decoration: none !important;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.ibe-tc-list-item:hover {
+    transform: translateX(4px);
+}
+
+.ibe-tc-list-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+    font-size: 13px;
+    border: 1.5px solid currentColor;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.ibe-tc-list-icon img,
+.ibe-tc-list-icon svg,
+.ibe-tc-list-icon i {
+    width: 15px;
+    height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    object-fit: contain;
+    font-size: 13px;
+    fill: currentColor;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ibe-tc-list-text {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+.ibe-tc-list-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 2px;
+    transition: transform 0.2s ease;
+}
+
+.ibe-tc-list-item:hover .ibe-tc-list-arrow {
+    transform: translateX(3px);
+}
+
+.ibe-tc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 13px 30px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    align-self: stretch;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.ibe-tc-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.ibe-tc-btn svg {
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.ibe-tc-btn:hover svg {
+    transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+    .elementor-widget-ibe_tradition_cards .ibe-tradition-card,
+    .ibe-tradition-card {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+    }
+    .elementor-widget-ibe_tradition_cards .ibe-tc-image,
+    .ibe-tradition-card .ibe-tc-image,
+    .ibe-tc-image {
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 auto !important;
+        min-height: 320px;
+        background-position: top center !important;
+    }
+    .elementor-widget-ibe_tradition_cards .ibe-tc-content,
+    .ibe-tradition-card .ibe-tc-content,
+    .ibe-tc-content {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 auto !important;
+        margin-left: 0 !important;
+        margin-top: -1px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .elementor-widget-ibe_tradition_cards .ibe-tradition-cards-grid,
+    .ibe-tradition-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+    .elementor-widget-ibe_tradition_cards .ibe-tc-image,
+    .ibe-tradition-card .ibe-tc-image,
+    .ibe-tc-image {
+        min-height: 280px;
+        background-position: top center !important;
+    }
+    .elementor-widget-ibe_tradition_cards .ibe-tc-content,
+    .ibe-tradition-card .ibe-tc-content,
+    .ibe-tc-content {
+        padding: 24px 16px;
+    }
+    .elementor-widget-ibe_tradition_cards .ibe-tc-title,
+    .ibe-tradition-card .ibe-tc-title,
+    .ibe-tc-title {
+        font-size: 22px;
+    }
+}

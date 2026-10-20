@@ -1,0 +1,214 @@
+/* 
+ * Testimonial Slider For All - Styles
+ */
+
+.twbc-testimonial-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+.twbc-testimonial-wrapper.twbc-layout-grid {
+    display: grid;
+    gap: 30px;
+}
+.twbc-layout-grid.twbc-grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.twbc-layout-grid.twbc-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.twbc-layout-grid.twbc-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.twbc-layout-grid.twbc-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+    .twbc-layout-grid.twbc-grid-cols-tab-1 { grid-template-columns: repeat(1, 1fr); }
+    .twbc-layout-grid.twbc-grid-cols-tab-2 { grid-template-columns: repeat(2, 1fr); }
+    .twbc-layout-grid.twbc-grid-cols-tab-3 { grid-template-columns: repeat(3, 1fr); }
+    .twbc-layout-grid.twbc-grid-cols-tab-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 767px) {
+    .twbc-layout-grid.twbc-grid-cols-mob-1 { grid-template-columns: repeat(1, 1fr); }
+    .twbc-layout-grid.twbc-grid-cols-mob-2 { grid-template-columns: repeat(2, 1fr); }
+    .twbc-layout-grid.twbc-grid-cols-mob-3 { grid-template-columns: repeat(3, 1fr); }
+    .twbc-layout-grid.twbc-grid-cols-mob-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Slider Layout overrides */
+.twbc-testimonial-swiper {
+    position: relative; /* For arrows */
+}
+
+.twbc-testimonial-swiper.twbc-pad-bottom {
+    padding-bottom: 50px;
+    padding-top: 0;
+}
+
+.twbc-testimonial-swiper.twbc-pad-top {
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+
+.twbc-testimonial-wrapper .swiper-pagination.twbc-pagination-above {
+    bottom: auto;
+    top: 0;
+}
+
+.twbc-testimonial-wrapper .swiper-pagination.twbc-pagination-below {
+    top: auto;
+    bottom: 0;
+}
+
+/* Ensure equal height cards */
+.twbc-testimonial-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+.twbc-testimonial-swiper .swiper-slide {
+    height: auto;
+}
+
+.twbc-testimonial-wrapper .swiper-pagination-bullet-active {
+    background: #0A3681 !important;
+}
+
+/* Custom Arrows */
+.twbc-swiper-prev, .twbc-swiper-next {
+    color: #0A3681;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Marquee continuous linear easing */
+.twbc-marquee-mode .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.twbc-testimonial-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.twbc-testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.twbc-quotes-icon {
+    width: 60px;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.twbc-quotes-icon img {
+    max-width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.twbc-review-title {
+    margin: 0;
+    font-weight: 600;
+}
+
+.twbc-testimonial-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.twbc-client-image {
+    flex-shrink: 0;
+}
+
+.twbc-client-image img {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px !important;
+    max-width: 60px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.twbc-client-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.twbc-testimonial-name-location {
+    font-size: 14px;
+    color: #0A3681;
+    font-weight: 500;
+}
+
+.twbc-testimonial-stars {
+    display: flex;
+    gap: 2px;
+}
+.twbc-testimonial-stars svg {
+    width: 16px;
+    height: 16px;
+    fill: #d4af37;
+    color: #d4af37;
+}
+
+.twbc-testimonial-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #334155;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+/* ==============================================================
+ * Pure CSS Marquee (Bypasses Swiper for guaranteed continuous loop)
+ * ============================================================== */
+.twbc-pure-marquee {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px; /* safety padding for shadows */
+}
+
+.twbc-marquee-track {
+    display: flex;
+    width: max-content;
+    /* CSS animation handles the loop flawlessly. Speed is passed from Elementor */
+    animation: twbcPureMarquee var(--marquee-speed, 20000ms) linear infinite;
+}
+
+.twbc-marquee-content {
+    display: flex;
+    gap: 30px; /* Spacing between cards */
+    padding-right: 30px; /* Essential gap before the duplicate track starts */
+}
+
+.twbc-pure-marquee .twbc-testimonial-card {
+    width: 350px; /* Fixed width works best for marquees, giving a consistent ticket feel */
+    flex-shrink: 0;
+}
+
+/* Pause on hover */
+.twbc-pure-marquee:hover .twbc-marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes twbcPureMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Scrolls exactly halfway through the track, which perfectly aligns with the start of the duplicate */
+        transform: translateX(-50%);
+    }
+}
